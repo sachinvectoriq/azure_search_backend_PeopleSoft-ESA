@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'app-azuresearch-qa-ps-esa'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B971C1DEF2594DC9A33EDB718F187FA6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A5B23C9AF554EE58B2592FBC18A45D7 }}
