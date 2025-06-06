@@ -66,7 +66,7 @@ def search_and_answer_query(user_query, user_id):
             vector_queries=[vector_query],
             select=["title", "chunk", "parent_id"],
             top=k_value,
-            semantic_configuration_name="index-obe-final-semantic-configuration",
+            semantic_configuration_name="index-peoplesoft-semantic-configuration",
             query_type="semantic"
         )
         chunks = []
