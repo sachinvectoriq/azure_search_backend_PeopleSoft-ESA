@@ -29,7 +29,7 @@ def log_query():
         cur = conn.cursor()
 
         insert_query = """
-            INSERT INTO azaisearch_logging (chat_session_id, user_id, user_name, query, ai_response, citations, login_session_id)
+            INSERT INTO azaisearch_peoplesoft_logging (chat_session_id, user_id, user_name, query, ai_response, citations, login_session_id)
             VALUES (%s, %s, %s, %s, %s, %s, %s)
         """
 
