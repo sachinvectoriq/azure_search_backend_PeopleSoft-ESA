@@ -40,7 +40,7 @@ def submit_feedback():
 
         # Insert into table
         insert_query = """
-            INSERT INTO azaisearch_feedback 
+            INSERT INTO azaisearch_peoplesoft_feedback 
             (session_id, user_name, date_and_time, query, ai_response, citations, feedback_type, feedback)
             VALUES (%s, %s, NOW(), %s, %s, %s, %s, %s)
         """
