@@ -31,7 +31,7 @@ def log_user():
         cur = conn.cursor()
 
         insert_query = sql.SQL("""
-            INSERT INTO azaisearch_login_log (user_name)
+            INSERT INTO azaisearch_peoplesoft_login_log (user_name)
             VALUES (%s)
             RETURNING login_session_id, user_name, date_and_time;
         """)
