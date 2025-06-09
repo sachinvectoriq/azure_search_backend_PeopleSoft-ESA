@@ -25,13 +25,16 @@ def submit_feedback():
         data = request.get_json()
 
         # Extracting values from JSON
-        session_id = data.get("session_id")
+        chat_session_id = data.get("chat_session_id")
         user_name = data.get("user_name")
         query = data.get("query")
         ai_response = data.get("ai_response")
         citations = data.get("citations")
         feedback_type = data.get("feedback_type")
         feedback = data.get("feedback")
+        login_session_id = data.get("login_session_id")
+        user_id = data.get("user_id")
+
 
         # Connect to PostgreSQL
         conn = get_db_connection()
@@ -41,13 +44,13 @@ def submit_feedback():
         # Insert into table
         insert_query = """
             INSERT INTO azaisearch_peoplesoft_feedback 
-            (session_id, user_name, date_and_time, query, ai_response, citations, feedback_type, feedback)
-            VALUES (%s, %s, NOW(), %s, %s, %s, %s, %s)
+            (chat_session_id, user_name, date_and_time, query, ai_response, citations, feedback_type, feedback, login_session_id, user_id)
+            VALUES (%s, %s, NOW(), %s, %s, %s, %s, %s, %s, %s)
         """
 
         cursor.execute(insert_query, (
-            session_id, user_name, query, ai_response,
-            citations, feedback_type, feedback
+            chat_session_id, user_name, query, ai_response,
+            citations, feedback_type, feedback, login_session_id, user_id
         ))
         conn.commit()
 
