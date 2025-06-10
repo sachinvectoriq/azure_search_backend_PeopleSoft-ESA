@@ -6,9 +6,10 @@ from azure.search.documents import SearchClient
 from azure.search.documents.models import VectorizableTextQuery
 from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 from openai import AzureOpenAI
-
+import os
 app = Flask(__name__)
 user_conversations = {}
+SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT")
 
 def safe_base64_decode(data):
     if data.startswith("https"):
@@ -128,7 +129,11 @@ Respond with:
     )
 
     response = openai_client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt}
+            
+            ],
         model=deployment_name,
         temperature=0.7
     )
