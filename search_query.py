@@ -106,6 +106,9 @@ def search_and_answer_query(user_query, user_id):
 Guidelines:
 - Focus your answer primarily on the chunk(s) that contain the most direct and complete answer.
 - Extract only factual information present in the chunks.
+- If the query involves a procedural task (e.g., setting up a module, fixing an issue, or configuring settings), provide a detailed, sequential explanation of steps
+- Begin each response with a brief **Summary** of the topic or task being addressed.
+- Include sections like **Step-by-Step Process**, **Key Considerations**, or **FAQs** if applicable
 - Each fact must be followed immediately by the citation in square brackets, e.g., [3]. Only cite the chunk ID that directly supports the statement.
 - Do not add any information not explicitly present in the source chunks.
 - Provide a brief summary followed by supporting details.Use bold words to highlight titles and important words
