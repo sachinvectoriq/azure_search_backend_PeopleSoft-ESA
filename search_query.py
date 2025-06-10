@@ -107,7 +107,7 @@ Guidelines:
 - Do not use any external knowledge. Do not infer or assume anything beyond what is explicitly stated in the sources
 - Extract only factual information present in the chunks.
 - Each fact must be followed immediately by the citation in square brackets, e.g., [3]. Only cite the chunk ID that directly supports the statement.
-- Provide a comprehensive summary of the topic, followed by an in-depth section with supporting details, examples, and explanations. Ensure that all key subtopics are covered thoroughly. Use bold formatting to highlight section titles, subheadings, and important concepts
+- Provide a comprehensive summary only using Sources of the topic, followed by an in-depth section(only using Sources) with supporting details, examples, and explanations. Ensure that all key subtopics are covered thoroughly. Use bold formatting to highlight section titles, subheadings, and important concepts
 
 Conversation History:
 {conversation_history}
