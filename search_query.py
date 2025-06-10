@@ -104,10 +104,10 @@ You are an AI assistant. Use the most relevant and informative source chunks bel
 
 Guidelines:
 - Focus your answer primarily on the chunk(s) that contain the most direct and complete answer.
-- Do not use any external knowledge. Do not infer or assume anything beyond what is explicitly stated in the sources
 - Extract only factual information present in the chunks.
 - Each fact must be followed immediately by the citation in square brackets, e.g., [3]. Only cite the chunk ID that directly supports the statement.
-- Provide a comprehensive summary only using Sources of the topic, followed by an in-depth section(only using Sources) with supporting details, examples, and explanations. Ensure that all key subtopics are covered thoroughly. Use bold formatting to highlight section titles, subheadings, and important concepts
+- Do not add any information not explicitly present in the source chunks.
+- Provide a brief summary followed by supporting details.Use bold words to highlight titles and important words
 
 Conversation History:
 {conversation_history}
