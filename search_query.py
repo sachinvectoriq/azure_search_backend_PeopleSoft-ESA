@@ -180,7 +180,6 @@ When responding to a query requiring a detailed process or multi-step solution:
 
 **Key Considerations**:
 - Ensure the Pay Calendar aligns with payroll processing deadlines and applicable regulations.
-- Refer to [Chapter X: Pay Calendars] in PeopleSoft Payroll documentation for additional guidance.
 
 
 Conversation History:
