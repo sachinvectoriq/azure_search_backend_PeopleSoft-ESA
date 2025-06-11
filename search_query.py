@@ -115,6 +115,7 @@ Guidelines:
 - Begin each response with a brief **Summary** of the topic or task being addressed.
 - Include sections like **Step-by-Step Process**, **Key Considerations**, or **FAQs** if applicable
 - Each fact must be followed immediately by the citation in square brackets, e.g., [3]. Only cite the chunk ID that directly supports the statement.
+- Use the conversation history only to understand the user's question or context. Do not use it to generate or support your answer. All answers must come strictly from the provided source chunks
 - Do not add any information not explicitly present in the source chunks.
 - Provide a brief summary followed by supporting details.Use bold words to highlight titles and important words
 
