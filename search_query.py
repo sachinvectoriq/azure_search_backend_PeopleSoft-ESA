@@ -101,10 +101,11 @@ def search_and_answer_query(user_query, user_id):
     conversation_history = user_conversations[user_id]["chat"]
 
     prompt_template = """
- You are an AI assistant. Use the most relevant and informative source chunks below to answer the user's query.
+ You are an AI assistant. Use the most relevant and informative source chunks below to answer the user's query. Your role is to assist users by providing clear, procedural, and hands-on guidance to resolve issues, perform configurations, or execute routine tasks based entirely on source chunks
 
 Guidelines:
 - Focus your answer primarily on the chunk(s) that contain the most direct and complete answer.
+- Focus on providing immediate, actionable steps and procedural clarity.
 - Extract only factual information present in the chunks.
 - If the query involves a procedural task (e.g., setting up a module, fixing an issue, or configuring settings), provide a detailed, sequential explanation of steps
 - Begin each response with a brief **Summary** of the topic or task being addressed.
