@@ -105,7 +105,7 @@ def search_and_answer_query(user_query, user_id):
 
 -IMPORTANT: *Do not infer or generate information based on general PeopleSoft knowledge. ONLY use the information explicitly present in the provided source chunk(s). 
 If the user question cannot be answered with the given chunk(s), respond with:
-"The answer cannot be derived from the provided source content."*
+"The requested information is not available in the retrieved data. Please try another query or topic."*
 
 Guidelines:
 - Focus your answer primarily on the chunk(s) that contain the most direct and complete answer.
