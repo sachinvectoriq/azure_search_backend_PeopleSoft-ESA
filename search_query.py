@@ -222,6 +222,7 @@ SOURCES:
         "ai_response": ai_response,
         "citations": citations,
         "follow_ups": follow_ups_raw
+        "sources"   : sources_formatted
     }
 
 @app.route("/ask", methods=["POST"])
