@@ -103,6 +103,10 @@ def search_and_answer_query(user_query, user_id):
     prompt_template = """
  You are an AI assistant. Use the most relevant and informative source chunks below to answer the user's query. Your role is to assist users by providing clear, procedural, and hands-on guidance to resolve issues, perform configurations, or execute routine tasks based entirely on source chunks
 
+-IMPORTANT: *Do not infer or generate information based on general PeopleSoft knowledge. ONLY use the information explicitly present in the provided source chunk(s). 
+If the user question cannot be answered with the given chunk(s), respond with:
+"The answer cannot be derived from the provided source content."*
+
 Guidelines:
 - Focus your answer primarily on the chunk(s) that contain the most direct and complete answer.
 - Focus on providing immediate, actionable steps and procedural clarity.
