@@ -221,7 +221,7 @@ SOURCES:
         "query": user_query,
         "ai_response": ai_response,
         "citations": citations,
-        "follow_ups": follow_ups_raw
+        "follow_ups": follow_ups_raw,
         "sources"   : sources_formatted
     }
 
