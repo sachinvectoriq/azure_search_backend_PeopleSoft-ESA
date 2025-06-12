@@ -106,7 +106,9 @@ def search_and_answer_query(user_query, user_id):
 -IMPORTANT: *Do not infer or generate information based on general PeopleSoft knowledge. ONLY use the information explicitly present in the provided source chunk(s). 
 - However, you **may use the conversation history solely to understand the user’s intent or clarify ambiguous queries**.
 - If the question cannot be answered using the source chunks, respond with:
-  > "The requested information is not available in the retrieved data. Please try another query or topic."
+  We couldn’t find a solution based on your current query.For assistance with issues not covered here, please consider opening a SNOW support ticket.
+  Click here https://sthubdevaioc273154123411.blob.core.windows.net/snowticket/How%20to%20Create%20a%20PeopleSoft%20ESA%20to%20Aerotek%20Support%20Ticket%20(1).docx
+ Alternatively, you can try rephrasing or modifying your query
 
 
 Guidelines:
