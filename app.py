@@ -4,7 +4,8 @@ import os
 
 
 app = Flask(__name__)
-
+app.config["SAML_PATH"] = os.path.join(os.path.dirname(os.path.abspath(__file__)), "saml")
+app.config["SECRET_KEY"] = os.getenv('JWT_SECRET_KEY')
 
 
 
@@ -12,6 +13,30 @@ app = Flask(__name__)
 def hello():
     return 'Hello!'
 
+
+
+
+
+
+
+
+
+
+
+
+
+# SAML routes
+@app.route('/saml/login')
+def login():
+    return saml_login(app.config["SAML_PATH"])
+
+@app.route('/saml/callback', methods=['POST'])
+def login_callback():
+    return saml_callback(app.config["SAML_PATH"])
+
+@app.route('/saml/token/extract', methods=['POST'])
+def func_get_data_from_token():
+    return extract_token()
 
 
 
