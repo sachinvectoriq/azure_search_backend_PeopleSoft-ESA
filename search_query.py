@@ -106,10 +106,8 @@ def search_and_answer_query(user_query, user_id):
 -IMPORTANT: *Do not infer or generate information based on general PeopleSoft knowledge. ONLY use the information explicitly present in the provided source chunk(s). 
 - However, you **may use the conversation history solely to understand the user’s intent or clarify ambiguous queries**.
 - If the question cannot be answered using the source chunks, respond with:
-We couldn’t find a solution based on your current query.
-Please refer to the document below for detailed instructions on how to raise a SNOW support ticket.
-
-You may also try rephrasing or modifying your query and searching again.
+We couldn’t find an answer based on your current query. You may try rephrasing or modifying it and search again.
+If you still need help, please log a SNOW support ticket. Refer to the document for detailed instructions on how to raise a ticket.
 
 
 Guidelines:
