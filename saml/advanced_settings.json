@@ -9,6 +9,7 @@
     "wantAssertionsSigned": false,
     "wantAssertionsEncrypted": false,
     "wantNameId": true,
-    "wantNameIdEncrypted": false
+    "wantNameIdEncrypted": false,
+    "requestedAuthnContext": false
   }
 }
