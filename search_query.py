@@ -94,8 +94,21 @@ def search_and_answer_query(user_query, user_id):
     # Second call: current query
     standalone_chunks, standalone_sources = fetch_chunks(user_query, 5, 6)
 
-    all_chunks = history_chunks + standalone_chunks
-    all_sources = history_sources + standalone_sources
+    combined_chunks = history_chunks + standalone_chunks
+    seen_chunks = set()
+    all_chunks = []
+    for chunk in combined_chunks:
+        identifier = chunk["chunk"]
+        if identifier not in seen_chunks:
+            seen_chunks.add(identifier)
+            all_chunks.append(chunk)
+
+    # Build sources from deduplicated chunks
+    all_sources = []
+    for chunk in all_chunks:
+        all_sources.append(
+            f"Source ID: [{chunk['id']}]\nContent: {chunk['chunk']}\nDocument: {chunk['parent_id']}"
+        )
     sources_formatted = "\n\n---\n\n".join(all_sources)
 
     conversation_history = user_conversations[user_id]["chat"]
